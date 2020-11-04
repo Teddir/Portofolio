@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Quicksand:wght@500&family=Roboto+Slab&display=swap');
+* 
+{
+    margin: 0;
+    padding: 0;
+} 
+* {
+    scroll-behavior: smooth;
+}
+body
+{
+    font-family: 'Quicksand', sans-serif;
+    height: 100vh;
+
+}
+#nav-bar
+{
+    font-family: 'Quicksand', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navbar
+{
+    background-image: linear-gradient(to right,#02005e, #02005e );
+    font-family: 'Quicksand', sans-serif;
+}
+.kamu1
+{
+    color: #fff;
+    padding: 10px;
+    position: relative;
+    font-size: 1rem;
+    border-left: 5px solid blue;
+    font-weight: 300;
+}
+.img-fluid1
+{
+    float: right;
+    position: relative;
+    max-width: 90%;
+}
+.navbar-nav li
+{
+    padding: 0 10px;
+}
+.navbar-nav li a
+{
+    color:rgb(240, 236, 236) !important;
+    font-weight: 600;
+    float: right;
+    text-align: left;
+}
+.fa-bars
+{
+    color: #fff;
+    font-size: 30px !important;
+}
+.navbar-toggler
+{
+    outline: none !important;
+}
+
+/* banner */
+
+#banner
+{
+    background-color: #02005e;
+    padding-top: 1%;
+    color: white;
+
+    /* height: 100vh;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    background-color: #004439; */
+}
+.img-q
+{
+    width: 100%;
+}
+.sekolah-title
+{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 100px;
+    
+}
+.sekolah-titlek
+{
+    color: blue;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 5px;
+    
+}
+#profil
+{
+    padding: 100px 0;
+}
+.card
+{
+    size: 1px;
+}
+.kami-img
+{
+    width: 100px;
+    margin-top: 50px;
+}
+h1
+{
+    color: blue;
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 80px;
+    font-size: 3.75rem;
+    line-height: 1.2;
+    text-shadow: 0 13.36px 8.896px #c4b59d, 0 -2px 1px #fff;
+    font-size: 40px;
+    font-weight: 600;
+
+}
+
+
+.title1::after
+{
+    content: '';
+    background: blue;
+    height: 3px;
+    width: 100px;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transform: translate('center');
+
+}
+.sekolah-title1
+{
+    color: #fff;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(197, 0, 238, 0.3);
+    background-color: blue;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 100px;
+    margin-bottom: 40px;
+
+}
+.kamu2
+{
+    margin-top: 70px;
+    padding-top: 80px 0;
+    shape-margin: 12px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+
+/* fasilitas */
+
+#fasilitas
+{
+    background: #f8f9fa;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.fasilitas-title
+{
+    font-size: 50px;
+    font-weight: 400;
+    margin-top: 8%;
+}
+#fasilitas ul li
+{
+    margin: 10px o;
+}
+#fasilitas ul
+{
+    margin-left: 20px;
+}
+
+/* pengajar */
+
+#pengajar
+{
+    margin: 100px 0;
+}
+.pengajar-q
+{
+    border-left: 4px solid blue;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.pengajar
+{
+    border-radius: 50%;
+}
+.user-detail
+{
+    display: inline-block;
+    font-size: 12px;
+}
+.peta
+{
+    z-index: 3;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    border-width: 0px;
+    margin: 0px;
+    left: 0px;
+    top: 0px;
+    touch-action: pan-x pan-y;
+}
+
+/* alamat */
+
+
+#alamat p
+{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* footer */
+
+#footer
+{
+    background-color: #02005e;
+    padding-top: 5%;
+    color: white;
+}
+.footer-img
+{
+    width: 100%;
+}
+.footer-box
+{
+    padding: 20px;
+}
+.footer-box img
+{
+    width:  120px;
+    margin-bottom: 20px;
+}
+.footer-box .fa
+{
+    margin-right: 8px;
+    font-size: 25px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding-top: 7px;
+    border-radius: 50px;
+    background-color: blue;
+}
+.footer-box .form-control
+{
+    box-shadow: none !important;
+    border: none;
+    border-radius: 0%;
+    margin-top: 25px;
+    max-width: 250px;
+}
+.footer-box .btn-primary
+{
+    box-shadow: none !important;
+    border: none;
+    border-radius: 0%;
+    margin-top: 20px;
+    background-color: blue;
+}
+
+/* sosmed */
+#sosmed
+{
+    background-color: #02005e;
+    padding: 100px 0;
+}
+.sosmed-icons img
+{
+    width: 60px;
+    transition: 0.5s;
+}
+.sosmed-icons a:hover img
+{
+    transform: translate(-10px);
+}
+
+/* footer */
+
+.foot
+{
+    background: #020135;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+    font-size: 0.875rem;
+    font-family: Quicksand, 'sans-serif';
+    font-weight: 400;
+    line-height: 1.43;
+}
