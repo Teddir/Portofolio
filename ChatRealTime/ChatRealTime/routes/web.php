@@ -24,3 +24,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/message/{id}', 'HomeController@getMessage')->name('message');
 Route::post('/message', 'HomeController@sendMessage');
 
+Route::get('/nexmo', 'NexmoController@show')->name('nexmo');
+Route::post('/nexmo', 'NexmoController@verify')->name('nexmo');
+

@@ -8,6 +8,10 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Nexmo;
+use NotificationChannels\Twilio\TwilioChannel;
+use NotificationChannels\Twilio\TwilioMmsMessage;
+use Illuminate\Notifications\Notification;
 
 class RegisterController extends Controller
 {
@@ -29,7 +33,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/nexmo';
 
     /**
      * Create a new controller instance.
@@ -53,8 +57,13 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'avatar' => 'https://via.placeholder.com/150',
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'phone_number' => ['required', 'min:10', 'max:15', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
+
+        $this->sendMessage('User registration successful!!', $request->phone_number);
+        return back()->with(['success' => "{$request->phone_number} registered"]);
+
     }
 
     /**
@@ -65,11 +74,34 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        // $verification = Nexmo::message()->send([
+        //     'to' => $data['phone_number'],
+        //     'from' => 'Teddir',
+        //     'text' => 'Hello '
+            
+
+        // $verification = Nexmo::verify()->start([
+        //     'number' => $data['phone_number'],
+        //     'brand' => 'Phone Verification',
+        // ]);
+
+        // // Log::info('sent message: ' . $verification['message-id']);
+
+        // session(['nexmo_request_id' => $verification->getRequestId()]);
+            
+        $verification = Nexmo::message()->send([
+            'to' => $data['phone_number'],
+            'from' => '@leggetter',
+            'text' => 'Sending SMS from Laravel. Woohoo!'
+        ]);
+        Log::info('sent message: ' . $verification['message-id']);
+
         return User::create([
             'name' => $data['name'],
             'avatar' => 'https://via.placeholder.com/150',
             'email' => $data['email'],
-            'password' => $data['password'],
+            'phone_number' => $data['phone_number'],
+            'password' => Hash::make($data['password']),
         ]);
     }
 }
