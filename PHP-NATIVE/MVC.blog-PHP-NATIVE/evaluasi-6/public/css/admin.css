@@ -1,0 +1,21 @@
+body
+{
+    background-color: aqua;
+}
+.nav-link:hover
+{
+    background-color:grey ;
+}
+.displya-4
+{
+    font-weight: bold;
+}
+.card-body-icon
+{
+    position: absolute;
+    z-index: 0;
+    top: 25px;
+    right:30px;
+    opacity: 0.4;
+    font-size: 90px;
+}

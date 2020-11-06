@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');hr
+{
+    margin-top: 1px;
+}
+body {
+    padding: 25px;
+    padding-top: 0;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.container
+{
+    width: 1170px;
+    font-size: 24px;
+
+}
+.container .details .date
+{
+        display: inline-block;
+        margin-right: 20px;
+        font-size: 24px;
+
+}
+p
+{
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Istok Web', sans-serif;
+    font-size: 14px;
+    margin-top: 1rem;
+    line-height:25px;
+
+}
+.container .nav-item
+{
+    line-height:25px;
+
+}
+h1
+{
+    font-family: 'Fjalla One', sans-serif;
+}
+
+
+
+
